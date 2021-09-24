@@ -1,11 +1,18 @@
-# Documentation:
+### Date created
+Created on 23 September 2021
 
+### Project Title
+Programming for Data Science with Python Nanodegree Program: Python bikeshare project
 
-## Udacity GitHub python bikeshare exercise
-This repo was forked from [Udacity's GitHub Project](https://github.com/udacity/pdsnd_github.git)
+### Description
+This project uses data from bike sharing programs in Chicago, New York City and Washington, D.C. 
+and allows users to focus on specific months and days of the week. Python is the programming 
+language used to load data and prompt and interact with the user.
 
-## What's Happening Here
-GitHub user and aspiring data jockey dgdahl-udacity is completing Udacity's GitHub course project.
+### Files used
+Development was done in Visual Studio Code with miniconda and python 3.9.x and the python
+numpy and pandas packages.
 
-### Thoughts
-I learned quite a bit about git, but I still detest its arcane nature and cli, and think Linus should be ashamed of himself.
+### Credits
+https://stackoverflow.com/questions/53037698/how-can-i-find-the-most-frequent-two-column-combination-in-a-dataframe-in-python
+was used to find the most popular combination of start and stop points for bike trips.
