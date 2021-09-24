@@ -23,8 +23,7 @@ def get_filters():
     # Make a dict of likely inputs for cities; map it to a consistent name in cases like New York vs. New York City, etc.
     cities = {'chicago':'chicago', 'new york':'new york city', 'new york city':'new york city', 'washington':'washington', 'washington, d.c.':'washington'}
     while not city:
-        city = input('Please enter a city to examine: Chicago, New York or Washington, D.C.\n')
-        city = city.lower()
+        city = input('Please enter a city to examine: Chicago, New York or Washington, D.C.\n').lower()
         if city not in cities:
             city = None
 
@@ -32,8 +31,7 @@ def get_filters():
     # Allow users to enter either an abbreviation for the month or the full name; map it to the full name no matter what they enter.
     months = {'all':'all', 'january':'january', 'february':'february', 'march':'march', 'april':'april', 'may':'may', 'june':'june', 'jan':'january', 'feb':'february', 'mar':'march', 'apr':'april', 'jun':'june' }
     while not month:
-        month = input('Please enter the month, from january to june, \nwhose data you would like to see, or enter \'all\'.\n')
-        month = month.lower()
+        month = input('Please enter the month, from january to june, \nwhose data you would like to see, or enter \'all\'.\n').lower()
         if month not in months:
             month = None
 
@@ -41,8 +39,7 @@ def get_filters():
     # Allow users to enter an abbreviated name for the day or the full day; map it to the full day's name.
     days = {'all':'all', 'sunday':'sunday', 'sun':'sunday', 'monday':'monday', 'mon':'monday', 'tuesday':'tuesday', 'tue':'tuesday', 'wednesday':'wednesday', 'wed':'wednesday', 'thursday':'thursday', 'thu':'thursday', 'friday':'friday', 'fri':'friday', 'saturday':'saturday', 'sat':'saturday' }
     while not day:
-        day = input('Please enter a day of the week whose data you would \nlike to see, or enter \'all\'.\n')
-        day = day.lower()
+        day = input('Please enter a day of the week whose data you would \nlike to see, or enter \'all\'.\n').lower()
         if day not in days:
             day = None
 
@@ -204,7 +201,7 @@ def main():
         
         view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no?\n").lower()
         start_loc = 0
-        while view_data == 'yes' and len(df) > start_loc:
+        while view_data == 'yes' and len(df) > start_loc + 5:
             print(df.iloc[start_loc:start_loc + 5])
             start_loc += 5
             view_data = input("Do you wish to continue?(yes or no):\n").lower()
