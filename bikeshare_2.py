@@ -201,7 +201,7 @@ def main():
         
         view_data = input("Would you like to view 5 rows of individual trip data? Enter yes or no?\n").lower()
         start_loc = 0
-        while view_data == 'yes' and len(df) > start_loc:
+        while view_data == 'yes' and len(df) > start_loc + 5:
             print(df.iloc[start_loc:start_loc + 5])
             start_loc += 5
             view_data = input("Do you wish to continue?(yes or no):\n").lower()
